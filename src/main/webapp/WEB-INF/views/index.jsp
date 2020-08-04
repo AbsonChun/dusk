@@ -1,9 +1,11 @@
-<%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
-<html>
-    <head>
-        <title>${name}</title>
-    </head>
+<%@ page language="java" contentType="text/html; charset=utf-8"  pageEncoding="utf-8"%>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<jsp:include page="./base/base.jsp"/>
+<head>
+    <title>${name}</title>
+</head>
+    <jsp:include page="./base/header.jsp"></jsp:include>
     <body>
-        <h2>欢迎来到${name}!!!</h2>
+        <h1>${name}</h1>
     </body>
-</html>
+<jsp:include page="./base/footer.jsp"></jsp:include>

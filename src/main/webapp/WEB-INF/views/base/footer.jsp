@@ -2,5 +2,5 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <jsp:include page="./base.jsp"/>
 <div>
-        我是头部！
+    我是脚！
 </div>
