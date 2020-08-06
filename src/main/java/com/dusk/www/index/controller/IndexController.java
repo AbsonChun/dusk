@@ -17,7 +17,7 @@ public class IndexController {
     @Value("${com.dusk.name}")
     private String name;
 
-    @RequestMapping(value="/index.do")
+        @RequestMapping(value="/index.do")
     public String index(ModelMap map){
         map.put("name",name);
         return "/index";

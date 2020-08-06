@@ -1,3 +1,32 @@
+.main{
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+    /*ie6不识别min-height,如上述处理*/
+    position:absolute;
+}
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body,header,footer,span,p,a,font{
+    font-size: 18px;
+    font-family: Arial,Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, PingFang SC, Hiragino Sans GB, sans-serif;
+}
+body{
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom:80px;
+}
+.body-content{
+    margin: 0 auto;
+    width: 80%;
+    background: #fa7aff;
+}
+.float_left{float:left;}
+.float_right{float:right;}
+
+
 h1{
-    color:red;
+    color: #4b72ff;
 }
