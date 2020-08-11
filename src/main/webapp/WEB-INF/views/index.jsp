@@ -1,15 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"  pageEncoding="utf-8"%>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <jsp:include page="./base/base.jsp"/>
-<head>
-    <title>${name}</title>
-</head>
-<!--每个页面都需要这个main的div作为容器 -->
-
-    <jsp:include page="./base/header.jsp"></jsp:include>
-    <body>
-        <div class="body-content">
-            <h1>${name}</h1>
+<jsp:include page="./base/header.jsp"></jsp:include>
+<body>
+    <div class="body-content">
             <h1>1</h1>
             <h1>2</h1>
             <h1>3</h1>
@@ -35,7 +29,6 @@
             <h1>23</h1>
             <h1>24</h1>
             <h1>25</h1>
-        </div>
-    </body>
+    </div>
+</body>
 <jsp:include page="./base/footer.jsp"></jsp:include>
-<div>
