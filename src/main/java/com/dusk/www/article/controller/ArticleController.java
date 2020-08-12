@@ -8,19 +8,16 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/articleController")
-public class ArticleContoller {
+public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
 
     @RequestMapping(value = "/getArticleById.do")
     public String getArticleById(HttpServletRequest request,ModelMap modelMap, Integer id){
-        Map map = request.getParameterMap();
-        modelMap.putAll(map);
         if (id != null ){
             Article article = articleService.getArticleById(id);
             modelMap.put("article",article);
