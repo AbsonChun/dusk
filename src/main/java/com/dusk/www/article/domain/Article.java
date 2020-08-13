@@ -15,6 +15,7 @@ public class Article {
     private Integer click;//点击量
     private Integer status;//状态
     private Integer createUser;//创建人id
+    private String author;//创建人姓名
     private Date createTime;//创建时间
     private Date modifyTime;//修改时间
 
@@ -89,5 +90,13 @@ public class Article {
 
     public void setModifyTime(Date modifyTime) {
         this.modifyTime = modifyTime;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }

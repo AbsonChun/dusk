@@ -15,6 +15,7 @@ public class Menu {
     private Integer parentId;
     private String url;
     private Integer status;
+    private Integer order;
 
     public Integer getId() {
         return id;
@@ -70,5 +71,13 @@ public class Menu {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public Integer getOrder() {
+        return order;
+    }
+
+    public void setOrder(Integer order) {
+        this.order = order;
     }
 }

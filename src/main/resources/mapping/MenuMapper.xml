@@ -10,15 +10,16 @@
         <result column="parent_id" jdbcType="INTEGER" property="parentId" />
         <result column="url" jdbcType="VARCHAR" property="url" />
         <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="order" jdbcType="INTEGER" property="order" />
     </resultMap>
 
 
     <select id="getMenuById" resultType="com.dusk.www.menu.domain.Menu">
-        select * from menu where id = #{id}
+        select m.* from menu m where id = #{id}
     </select>
 
     <select id="getMenuListByLevelAndStatus" resultType="com.dusk.www.menu.domain.Menu">
-        select * from menu m where  m.level = #{level} and m.status = #{status}
+        select m.* from menu m where  m.level = #{level} and m.status = #{status} order by m.order asc
     </select>
 
 

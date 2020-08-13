@@ -21,6 +21,7 @@ public class ArticleController {
         if (id != null ){
             Article article = articleService.getArticleById(id);
             modelMap.put("article",article);
+            System.out.println(article.getCreateTime());
             return "/article/articleDetail";
         }
         return "/error";

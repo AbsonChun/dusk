@@ -10,13 +10,14 @@
         <result column="click" jdbcType="INTEGER" property="click" />
         <result column="status" jdbcType="INTEGER" property="status" />
         <result column="create_user" jdbcType="INTEGER" property="createUser" />
-        <result column="create_time" jdbcType="DATE" property="createTime" />
-        <result column="modify_time" jdbcType="DATE" property="modifyTime" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime"/>
+        <result column="author" jdbcType="VARCHAR" property="author" />
     </resultMap>
 
 
-    <select id="getArticleById" resultType="com.dusk.www.article.domain.Article">
-        select * from article where id = #{id}
+    <select id="getArticleById" resultMap="BaseResultMap">
+        select a.*,u.name as author from article a LEFT JOIN user u on a.create_user = u.id where a.id = #{id}
     </select>
 
     <select id="getArticleListByStatusAndPageNum" resultType="com.dusk.www.article.domain.Article">
