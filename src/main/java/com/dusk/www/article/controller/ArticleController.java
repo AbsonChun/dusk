@@ -2,6 +2,10 @@ package com.dusk.www.article.controller;
 
 import com.dusk.www.article.domain.Article;
 import com.dusk.www.article.service.ArticleService;
+import com.dusk.www.user.domain.User;
+import com.dusk.www.utils.shiro.ShiroUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,11 +21,11 @@ public class ArticleController {
     private ArticleService articleService;
 
     @RequestMapping(value = "/getArticleById.do")
-    public String getArticleById(HttpServletRequest request,ModelMap modelMap, Integer id){
+    public String getArticleById(HttpServletRequest request,ModelMap modelMap, Integer id,Integer type){
         if (id != null ){
-            Article article = articleService.getArticleById(id);
+            User user = (User) SecurityUtils.getSubject().getPrincipal();
+            Article article = articleService.getArticleById(id,type,user.getId());
             modelMap.put("article",article);
-            System.out.println(article.getCreateTime());
             return "/article/articleDetail";
         }
         return "/error";

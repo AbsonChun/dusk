@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface ArticleMapper {
 
-    Article getArticleById(Integer id);
+    Article getArticleById(@Param("id") Integer id,@Param("type") Integer type,@Param("user_id") Integer user_id);
 
     /**
      * @param status 状态

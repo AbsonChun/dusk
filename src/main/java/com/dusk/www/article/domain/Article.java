@@ -14,6 +14,7 @@ public class Article {
     private String content;//文章内容
     private Integer click;//点击量
     private Integer status;//状态
+    private Integer type; //类型
     private Integer createUser;//创建人id
     private String author;//创建人姓名
     private Date createTime;//创建时间
@@ -98,5 +99,13 @@ public class Article {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

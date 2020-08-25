@@ -14,8 +14,8 @@ public class ArticleService {
     private ArticleMapper articleMapper;
 
 
-    public Article getArticleById(Integer id){
-        return articleMapper.getArticleById(id);
+    public Article getArticleById(Integer id,Integer type,Integer user_id){
+        return articleMapper.getArticleById(id,type,user_id);
     }
 
     /**

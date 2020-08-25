@@ -9,6 +9,7 @@
         <result column="content" jdbcType="VARCHAR" property="content" />
         <result column="click" jdbcType="INTEGER" property="click" />
         <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="type" jdbcType="INTEGER" property="type" />
         <result column="create_user" jdbcType="INTEGER" property="createUser" />
         <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
         <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime"/>
@@ -17,7 +18,14 @@
 
 
     <select id="getArticleById" resultMap="BaseResultMap">
-        select a.*,u.name as author from article a LEFT JOIN user u on a.create_user = u.id where a.id = #{id}
+        select a.*,u.name as author from article a LEFT JOIN user u on a.create_user = u.id
+        where a.id = #{id}
+        <if test="type != null">
+            and a.type = #{type}
+        </if>
+        <if test="type == 3"><!-- type=3时是私密的贴 -->
+            and a.create_user = #{user_id}
+        </if>
     </select>
 
     <select id="getArticleListByStatusAndPageNum" resultType="com.dusk.www.article.domain.Article">

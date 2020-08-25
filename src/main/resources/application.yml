@@ -22,6 +22,18 @@ mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
   type-aliases-package: com.dusk.www.*.domain
 
+logging:
+  level:
+    com:
+      dusk:
+        www:
+          article.mapper: debug
+          index.mapper: debug
+          login.mapper: debug
+          menu.mapper: debug
+          user.mapper: debug
+
+
 
 
 
