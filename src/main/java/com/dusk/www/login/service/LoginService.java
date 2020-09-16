@@ -29,6 +29,8 @@ public class LoginService {
         User user = userMapper.getByLoginName(loginName);
         if (user !=null){
             if(StringUtils.isNotBlank(password)){
+                System.out.println("----->>user.getPassword()====" + user.getPassword());
+                System.out.println("----->>password====" + password);
                 if (password.equals(user.getPassword())){
                     returnMap.put("code",SUCCESS_CODE);
                     returnMap.put("message",SUCCESS_MESSAGE);

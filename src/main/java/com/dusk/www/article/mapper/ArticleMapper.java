@@ -22,4 +22,10 @@ public interface ArticleMapper {
      */
     List<Article> getArticleListByStatusAndPageNum(@Param("status") Integer status, @Param("pageNum") Integer pageNum, @Param("pageCount") Integer pageCount);
 
+    /**
+     * 保存文章，返回新保存的文章
+     * @param article
+     * @return
+     */
+    Integer saveArticleEdit(Article article);
 }

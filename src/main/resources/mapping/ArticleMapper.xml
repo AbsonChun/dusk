@@ -5,7 +5,7 @@
     <resultMap id="BaseResultMap" type="com.dusk.www.article.domain.Article">
         <result column="id" jdbcType="INTEGER" property="id" />
         <result column="title" jdbcType="VARCHAR" property="title" />
-        <result column="key" jdbcType="VARCHAR" property="key" />
+        <result column="keyword" jdbcType="VARCHAR" property="keyword" />
         <result column="content" jdbcType="VARCHAR" property="content" />
         <result column="click" jdbcType="INTEGER" property="click" />
         <result column="status" jdbcType="INTEGER" property="status" />
@@ -31,6 +31,11 @@
     <select id="getArticleListByStatusAndPageNum" resultType="com.dusk.www.article.domain.Article">
         select * from article a where  a.status = #{status} limit #{pageNum},#{pageCount}
     </select>
+
+    <insert  id="saveArticleEdit" useGeneratedKeys="true" keyProperty="id" parameterType="com.dusk.www.article.domain.Article">
+        insert into article(title,keyword,content,click,status,type,create_user,create_time,modify_time)
+          values(#{title},#{keyword},#{content},#{click},#{status},#{type},#{createUser},now(),now())
+    </insert >
 
 
 

@@ -10,7 +10,7 @@ public class Article {
 
     private Integer id;  //id
     private String title;//文章标题
-    private String key;//文章关键词
+    private String keyword;//文章关键词
     private String content;//文章内容
     private Integer click;//点击量
     private Integer status;//状态
@@ -37,12 +37,12 @@ public class Article {
         this.title = title;
     }
 
-    public String getKey() {
-        return key;
+    public String getKeyword() {
+        return keyword;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
     }
 
     public String getContent() {

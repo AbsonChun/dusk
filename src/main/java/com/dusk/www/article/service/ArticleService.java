@@ -3,7 +3,10 @@ package com.dusk.www.article.service;
 import com.dusk.www.article.domain.Article;
 import com.dusk.www.article.mapper.ArticleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -36,6 +39,14 @@ public class ArticleService {
             pageCount = 20;
         }
         return articleMapper.getArticleListByStatusAndPageNum(status,pageNum,pageCount);
+    }
+
+    //当有事务的时候 使用@Transactional+Cacheable(value = "article",key = "#article.id")
+    //@Transactional
+    //@Cacheable(value = "article",key = "#article.id")
+    @CachePut(value = "article",key = "#article.id")
+    public Integer saveArticleEdit(Article article){
+        return articleMapper.saveArticleEdit(article);
     }
 
 }

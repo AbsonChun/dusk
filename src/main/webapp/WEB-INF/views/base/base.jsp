@@ -7,8 +7,11 @@
 <jsp:include page="./base_lib.jsp"></jsp:include>
 
 <link rel="stylesheet" type="text/css" href="<%=cssPath%>main.css" />
-
 <script src="<%=jsPath%>jquery-1.7.2.js" type="text/javascript"></script>
 <script src="<%=jsPath%>jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="<%=jsPath%>main.js" type="text/javascript"></script>
 
+<link rel="stylesheet" type="text/css" href="<%=jsPath%>kindeditor/themes/default/default.css" />
+<script src="<%=jsPath%>kindeditor/kindeditor-all-min.js" type="text/javascript"></script>
+<script src="<%=jsPath%>kindeditor/lang/zh-CN.js" type="text/javascript"></script>
 

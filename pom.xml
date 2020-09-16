@@ -36,6 +36,24 @@
             <scope>5.1.4</scope>
         </dependency>
         <!-- mysql 需要的依赖 end-->
+        <!-- cache start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        <!-- cache  end-->
+        <!-- redis需要的依赖 start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- redis需要的依赖 end-->
+        <!-- 使用Jackson做序列化与反序列化 start-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <!-- 使用Jackson做序列化与反序列化 end -->
         <!-- mybatis 需要的依赖 start-->
        <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

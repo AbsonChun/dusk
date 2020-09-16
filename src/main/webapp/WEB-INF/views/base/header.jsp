@@ -14,9 +14,16 @@
                     <img src="<%=cssPath%>image/logo.jpg">
                 </div>
                 <ul class="first-mune">
+                        <li> <a href="<%=ctx%>indexController/index.do" >首页</a></li>
                         <c:forEach items="${menuList}" var="cur" varStatus="st">
-                                <li> <a href="<%=ctx%>${cur.url}">${cur.name}</a></li>
+                                <li> <a href="#" onclick="loadMenu('${cur.url}')">${cur.name}</a></li>
                         </c:forEach>
                 </ul>
         </div>
 </header>
+<script type="text/javascript">
+    function loadMenu(url){
+        var hurl = "<%=ctx%>"+url;
+        window.open(hurl);
+    };
+</script>

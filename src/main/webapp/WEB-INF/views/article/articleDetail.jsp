@@ -13,7 +13,7 @@
                     <div class="content-header-tips">
                         <ul>
                             <li><span>${article.author}</span></li>
-                            <li><span>${article.key}</span></li>
+                            <li><span>${article.keyword}</span></li>
                             <li><span><fmt:formatDate value="${article.createTime }" pattern="yyyy-MM-dd HH:mm:ss"/></span></li>
                         </ul>
                     </div>
