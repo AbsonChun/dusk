@@ -1,25 +1,108 @@
-.main{ height:auto !important; min-height:100%; /*ie6不识别min-height,如上述处理*/ position:absolute;}
-body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td{margin: 0; padding: 0;}
-body,header,footer,span,p,a,font{font-size: 18px; font-family: Arial,Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, PingFang SC, Hiragino Sans GB, sans-serif;}
-body{margin: 0 auto; width: 100%; padding-top:80px;min-height:100%;background: #F5F6F7;}
-.body-content{margin: 0 auto; width: 80%; background: #c6c0b4;}
-.body-content .content{width:60%;height: 100%;background: #F5F5F5;margin: 0px auto;}
-.body-content .content-header{width:90%;height:70px;padding:10px;}
-.body-content .content-header-title{height: 40px;}
-.body-content .content-header-title h1{font-size:28px;line-height: 28px;margin-left: 20px;}
-.body-content .content-header-tips{height: 30px;line-height: 30px;}
-.body-content .content-header-tips ul li{float:left;height: 30px;list-style:none;margin-left: 20px;}
-.body-content .content-header-tips ul li span{font-size: 16px;line-height: 100%;color:#999AAA;font-family: 'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif;}
-.body-content .content-body{font-size: 16px;}
-.body-content .content-body p{height:24px;line-height: 24px;}
-.contentTable{width:100%;}
-.contentTable tr{height:28px;margin:5px;}
-.contentTable tr th{}
-.contentTable tr th a{font-size: 24px;}
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body, header, footer, span, p, a, font {
+    font-size: 18px;
+    font-family: Arial, Microsoft YaHei, SF Pro Display, Roboto, Noto, Arial, PingFang SC, Hiragino Sans GB, sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 80px;
+    min-height: 100%;
+    background: #F5F6F7;
+    position: absolute;
+    padding-bottom: 60px;
+}
+
+.main {
+}
+
+.body-content {
+    margin: 0 auto;
+    width: 80%;
+    background: #c6c0b4;
+}
+
+.body-content .content {
+    width: 60%;
+    height: 100%;
+    background: #F5F5F5;
+    margin: 0px auto;
+}
+
+.body-content .content-header {
+    width: 90%;
+    height: 70px;
+    padding: 10px;
+}
+
+.body-content .content-header-title {
+    height: 40px;
+}
+
+.body-content .content-header-title h1 {
+    font-size: 28px;
+    line-height: 28px;
+    margin-left: 20px;
+}
+
+.body-content .content-header-tips {
+    height: 30px;
+    line-height: 30px;
+}
+
+.body-content .content-header-tips ul li {
+    float: left;
+    height: 30px;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.body-content .content-header-tips ul li span {
+    font-size: 16px;
+    line-height: 100%;
+    color: #999AAA;
+    font-family: 'Microsoft YaHei', 'SF Pro Display', Roboto, Noto, Arial, 'PingFang SC', sans-serif;
+}
+
+.body-content .content-body {
+    font-size: 16px;
+}
+
+.body-content .content-body p {
+    height: 24px;
+    line-height: 24px;
+}
+
+.contentTable {
+    width: 100%;
+}
+
+.contentTable tr {
+    height: 28px;
+    margin: 5px;
+}
+
+.contentTable tr th {
+}
+
+.contentTable tr th a {
+    font-size: 24px;
+}
 
 
-.float_left{float:left;}
-.float_right{float:right;}
-.align_right{align:right;}
-.align_left{align:left;}
-.align_center{align:center;}
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+.align_right {
+    align: right;
+}
